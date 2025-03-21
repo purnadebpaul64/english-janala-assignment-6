@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala</title>
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/fc3ff6af56.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="black">
+    <!-- ########## header start ########## -->
+    <header class="sticky top-0 z-50">
+      <!-- nav start -->
+      <nav
+        id="nav-bar"
+        class="bg-[#f8f8f8] border-b-[2px] border-[#C6BDBD] hidden"
+      >
+        <div class="max-w-screen-xl px-10 mx-auto flex justify-between py-3">
+          <div class="flex gap-0.5 items-center">
+            <span class="poppins black text-xl font-semibold">English</span>
+            <img src="assets/logo.png" alt="" />
+            <span class="tiro black text-2xl">জানালা</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="#faq-section"
+              ><button class="poppins btn btn-outline btn-primary">
+                <i class="fa-solid fa-circle-question"></i>FAQ
+              </button></a
+            >
+            <a href="#vocabularies-section">
+              <button class="poppins btn btn-outline btn-primary">
+                <i class="fa-solid fa-book-open"></i>Learn
+              </button>
+            </a>
+            <button
+              onclick="logout()"
+              class="poppins btn btn-outline btn-primary"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i>Logout
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- nav end -->
+    </header>
+    <!-- ########## header end ########## -->
+
+    <!-- hero start -->
+    <section id="hero" class="max-w-screen-xl px-10 mx-auto">
+      <div class="grid grid-cols-2 gap-28 items-center">
+        <div class="space-y-4">
+          <h1 class="poppins black text-4xl font-bold">
+            <span class="accent">English</span> is Easy!!
+          </h1>
+          <p class="hind text-lg">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+          <div>
+            <fieldset class="fieldset">
+              <input
+                id="user-name"
+                type="email"
+                class="input"
+                placeholder="Enter Your Name"
+              />
+              <input
+                id="password"
+                type="password"
+                class="input"
+                placeholder="Password is 123456"
+              />
+              <div class="pt-4">
+                <button id="login-btn" class="btn bg-primary text-white">
+                  Get Started
+                </button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div>
+          <img src="./assets/hero-student.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- ########## Let's Learn Vocabularies section start ########## -->
+    <section
+      id="vocabularies-section"
+      class="max-w-screen-xl mx-auto px-10 pt-20 hidden"
+    >
+      <h2 class="text-3xl poppins font-bold text-center">
+        <span class="accent">Let's</span> Learn Vocabularies
+      </h2>
+      <!-- buttons section start -->
+      <section
+        id="vocButtonSection"
+        class="py-8 flex gap-3 justify-center"
+      ></section>
+      <!-- buttons section start -->
+      <!-- ### loader ### -->
+      <section id="loader" class="text-center py-10 hidden">
+        <span class="loading loading-dots loading-xl"></span>
+      </section>
+      <!-- content section start -->
+      <section
+        id="lesson-content-section"
+        class="max-w-screen-xl p-10 rounded-xl bg-[#f8f8f8] grid grid-cols-3 gap-4"
+      >
+        <div class="col-span-3">
+          <div class="space-y-4 text-center">
+            <p class="hind text-sm">আপনি এখনো কোন Lesson Select করেন নি</p>
+            <h2 class="hind text-3xl">একটি Lesson Select করুন।</h2>
+          </div>
+        </div>
+      </section>
+      <!-- content section end -->
+    </section>
+    <!-- ########## Let's Learn Vocabularies section end ########## -->
+
+    <!-- ########## Frequently Asked Questions section start ########## -->
+    <section
+      id="faq-section"
+      class="max-w-screen-xl mx-auto px-10 pt-18 hidden"
+    >
+      <h1 class="text-3xl poppins font-bold text-center">
+        <span class="accent">Frequently</span> Asked Questions
+      </h1>
+      <!-- faq start -->
+      <div>
+        <div
+          class="collapse collapse-plus bg-[#f8f8f8] border border-base-300 my-4"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            <p>The difference between var, let, and const</p>
+          </div>
+          <div class="collapse-content text-sm">
+            <p>
+              <b>var:</b> var is function-scoped, hoisted with undefined, can be
+              re-declared and updated.
+            </p>
+            <br />
+            <p>
+              <b>let:</b> let is block-scoped, hoisted but not initialized, can
+              be updated but not re-declared.
+            </p>
+            <br />
+            <p>
+              <b>const:</b> const is block-scoped, hoisted but not initialized,
+              cannot be updated or re-declared.
+            </p>
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-[#f8f8f8] border border-base-300 my-4"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            <p>The difference between map(), forEach(), and filter()</p>
+          </div>
+          <div class="collapse-content text-sm">
+            <p>
+              <b>map() :</b> Returns a new array by applying a function to each
+              element.
+            </p>
+            <br />
+            <p>
+              <b>forEach():</b> Iterates over elements but does not return a new
+              array.
+            </p>
+            <br />
+            <p>
+              <b>filter() :</b> Returns a new array containing only elements
+              that satisfy a given condition.
+            </p>
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-[#f8f8f8] border border-base-300 my-4"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            <p>
+              Explain arrow functions and how they are different from regular
+              functions
+            </p>
+          </div>
+          <div class="collapse-content text-sm">
+            <p>
+              Arrow functions offer a shorter syntax and inherit this from the
+              surrounding scope, making them useful in callbacks or event
+              listeners. They don’t have their own this or arguments object,
+              unlike regular functions, which have a dynamic this and access to
+              arguments. Arrow functions also allow implicit returns for single
+              expressions, while regular functions require an explicit return.
+              Arrow functions aren't ideal for object methods or constructors
+              due to the lack of this.
+            </p>
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-[#f8f8f8] border border-base-300 my-4"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            <p>how JavaScript Promises work</p>
+          </div>
+          <div class="collapse-content text-sm">
+            <p>
+              JavaScript promise represents an asynchronous operation with three
+              states 1.pending, 2.fulfilled, or 3.rejected. It is created using
+              new Promise(resolve, reject), where resolve() marks success and
+              reject() marks failure.
+            </p>
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-[#f8f8f8] border border-base-300 my-4"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            <p>How closures work in JavaScript</p>
+          </div>
+          <div class="collapse-content text-sm">
+            <p>
+              A closure works by allowing an inner function to access variables
+              from its outer function, even after the outer function has
+              finished executing.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- faq end -->
+    </section>
+    <!-- ########## Frequently Asked Questions section end ########## -->
+
+    <!-- ########## footer start ########## -->
+    <section class="mt-24 border-t-2 border-[#FFEBEB]">
+      <div
+        class="max-w-screen-xl mx-auto px-10 py-16 flex justify-between items-center"
+      >
+        <div class="space-y-2">
+          <div class="flex gap-0.5 items-center">
+            <span class="poppins black text-xl font-semibold">English</span>
+            <img src="assets/logo.png" alt="" />
+            <span class="tiro black text-2xl">জানালা</span>
+          </div>
+          <h3>ইংরেজি শিখুন সহজে</h3>
+          <p>Providing ED-Tech Applications since 2025</p>
+        </div>
+        <div>
+          <small>Follow us</small>
+          <div class="flex gap-5 pt-4">
+            <a
+              href="https://www.facebook.com/programmingherowebcourse"
+              target="_blank"
+              ><i class="fa-brands fa-facebook text-3xl"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/c/ProgrammingHeroCommunity"
+              target="_blank"
+              ><i class="fa-brands fa-youtube text-3xl"></i
+            ></a>
+            <a href="https://www.instagram.com/programminghero/" target="_blank"
+              ><i class="fa-brands fa-instagram text-3xl"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ########## footer end ########## -->
+
+    <!-- ### modal ### -->
+    <dialog id="word_details" class="modal">
+      <div id="display-word-details-section"></div>
+    </dialog>
+
+    <!-- script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
