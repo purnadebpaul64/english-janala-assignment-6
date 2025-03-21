@@ -34,9 +34,11 @@ document.getElementById("login-btn").addEventListener("click", (event) => {
   if (userName != "") {
     if (password === "123456") {
       login();
-      setTimeout(function () {
-        alert("successfully logged in");
-      }, 100);
+      Swal.fire({
+        title: "Congratulations!",
+        text: "Successfully Logged In",
+        icon: "success",
+      });
     } else {
       alert("worng Password");
     }
